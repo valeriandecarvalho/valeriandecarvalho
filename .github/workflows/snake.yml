@@ -1,0 +1,41 @@
+name: Generate contribution snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "19 4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-contribution-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate snake from GitHub contributions
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: valeriandecarvalho
+          outputs: |
+            dist/github-snake.svg?color_snake=#1E5A47&color_dots=#E8F1E5,#D2E6C6,#A9D28E,#6FA85F,#1E5A47
+            dist/github-snake-dark.svg?color_snake=#B9D99A&color_dots=#1B2521,#2F4A3C,#4F7A60,#78B178,#B9D99A
+
+      - name: Verify output files
+        run: |
+          test -s dist/github-snake.svg
+          test -s dist/github-snake-dark.svg
+
+      - name: Publish latest snapshot (one root commit only)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          force_orphan: true
+          disable_nojekyll: true
+          full_commit_message: "github contribution snake"

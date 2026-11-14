@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 66" width="220" height="66" role="img" aria-label="LinkedIn">
+  <defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14291D"/><stop offset="1" stop-color="#1A3626"/></linearGradient></defs>
+  <rect x="1" y="1" width="218" height="64" rx="15" fill="url(#panel)" stroke="#436B51" stroke-width="1.5"/>
+  <circle cx="37" cy="33" r="21" fill="#305F42"/>
+  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" transform="translate(23.5 19.5) scale(1.13)" fill="#B5E19B"/>
+  <text x="75" y="42" fill="#F0F7ED" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">LinkedIn</text>
+  <path d="M187 33h13m-5-5l5 5-5 5" stroke="#E1F1DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+ </svg>
